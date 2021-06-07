@@ -1,5 +1,5 @@
 # ISDEvaluation
-This is a This is a repository of the code used for the paper entitled []. This repository is modified from [ISDEvaluation](https://github.com/haiderstats/ISDEvaluation) by Humza Haider. The additional function is gradien boosted Cox model (GBMCox). Below are the original readme from ISDEvaluation.
+This is a This is a repository of the code used for the paper entitled "Learning Accurate Personalized Survival Models for Predicting Hospital Discharge and Mortality of COVID-19 Patients". This repository is modified from [ISDEvaluation](https://github.com/haiderstats/ISDEvaluation) by Humza Haider. The additional function is gradien boosted Cox model (GBMCox). Below are the original readme from ISDEvaluation.
 
 This is a repository of the code used for the paper entitled [Effective Ways to Build and Evaluate Individual
 Survival Distributions](https://arxiv.org/abs/1811.11347) (currently under review at the Journal of Machine Learning Research). This code can be used to run 6 different survival prediction models (Kaplan-Meier, Cox proportional-hazards, Accelerated Failure Time, Random Survival Forests, Cox Elastic-Net, and Multi-task Logistic Regression) and 5 evaluate those models across 5 different metrics (Concordance, Single/Integrated Brier score, L1-loss, 1-Calibration, and D-Calibration).
