@@ -46,7 +46,7 @@ library(fastcox)
 #For sindex
 library(prodlim)
 
-CoxPH_KP = function(training, testing,ElasticNet=T, numFolds = 5){
+CoxPH_KP = function(training, testing,ElasticNet=F, numFolds = 5){
   if(ElasticNet){
     timeInd = which(names(training) == "time")
     deltaInd = which(names(training) == "delta")

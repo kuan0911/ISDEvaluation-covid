@@ -59,12 +59,12 @@ Concordance = function(survMod, ties = "None", method = "Median"){
                                                                                      predictedTimes)))
   #Part 2:
   #The risk score should be higher for subjects that live shorter (i.e. lower average survival time).
-  risk = -1*averageSurvivalTimes
-  concordanceInfo = survConcordance(Surv(trueDeathTimes, censorStatus)~ risk)
-  concordantPairs= concordanceInfo$stats[1] 
-  discordantPairs = concordanceInfo$stats[2] 
-  riskTies = concordanceInfo$stats[3]
-  timeTies = concordanceInfo$stats[4]
+  risk = averageSurvivalTimes
+  concordanceInfo = concordance(Surv(trueDeathTimes, censorStatus)~ risk)
+  concordantPairs= concordanceInfo$count[1]
+  discordantPairs = concordanceInfo$count[2]
+  riskTies = concordanceInfo$count[3]
+  timeTies = concordanceInfo$count[4]
   
   CIndex = switch(ties,
                   None = concordantPairs/(concordantPairs + discordantPairs),
