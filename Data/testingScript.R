@@ -48,19 +48,21 @@ survivalDataset$countries = NULL
 ### End of preprocessing ###################################################
 
 source('analysisMaster.R')
-
+source('Evaluations/aveMetrics.R')
 ### Running ISD Evaluation ###
-ISD = analysisMaster(survivalDataset, CoxKP = F, MTLRModel=F,KaplanMeier = F,RSFModel=F,GBMModel=T,numberOfFolds = 5)
+model = 'RSF'
+ISD = analysisMaster(survivalDataset, CoxKP = as.logical(model=='Cox'), MTLRModel=as.logical(model=='MTLR'),RSFModel=as.logical(model=='RSF'),GBMModel = as.logical(model=='GBM'), FS = F, numberOfFolds = 5)
+res = aveMetrics(ISD)
 
 ### Plot survival curves ###
-plotSurvivalCurves(ISD$survivalCurves$Cox, 1:10)
+plotSurvivalCurves(ISD$survivalCurves[[model]], 1:10)
 
 ### Dcalibration Histogram ###
 binnames = c("[0.9,1]","[0.8,0.9)","[0.7,0.8)","[0.6,0.7)","[0.5,0.6)","[0.4,0.5)","[0.3,0.4)","[0.2,0.3)","[0.1,0.2)","[0,0.1)")
-barplot(100*ISD$DcalHistogram$Cox/sum(ISD$DcalHistogram$Cox),horiz=TRUE,xlab='Percentage in bin',names.arg=binnames,las=1,main='CoxKP',cex.axis=1.6,cex.names=1.6,cex.lab=1.6,cex.main=2)
+barplot(100*ISD$DcalHistogram[[model]]/sum(ISD$DcalHistogram[[model]]),horiz=TRUE,xlab='Percentage in bin',names.arg=binnames,las=1,main=model,cex.axis=1.6,cex.names=1.6,cex.lab=1.6,cex.main=2)
 
 ### Automation ###
-source('Evaluations/aveMetrics.R')
+
 ISD1 = analysisMaster(survivalDataset, CoxKP = T, MTLRModel=F,KaplanMeier = F,RSFModel=F,GBMModel=F, FS = F, numberOfFolds = 5,verbose = F)
 ISD2 = analysisMaster(survivalDataset, CoxKP = F, MTLRModel=T,KaplanMeier = F,RSFModel=F,GBMModel=F, FS = F, numberOfFolds = 5,verbose = F)
 ISD3 = analysisMaster(survivalDataset, CoxKP = F, MTLRModel=F,KaplanMeier = F,RSFModel=T,GBMModel=F, FS = F, numberOfFolds = 5,verbose = F)
