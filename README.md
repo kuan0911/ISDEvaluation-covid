@@ -1,8 +1,32 @@
-# ISDEvaluation
-This is a repository of the code used for the paper entitled "Learning Accurate Personalized Survival Models for Predicting Hospital Discharge and Mortality of COVID-19 Patients". This repository is modified from [ISDEvaluation](https://github.com/haiderstats/ISDEvaluation) by Humza Haider. The additional function is gradien boosted Cox model (GBMCox). Below are the original readme from ISDEvaluation.
+# COVID-19 ISDEvaluation
+This repository will contain the codes and datasets we used for our paper "Learning Accurate Personalized Survival Models for Predicting Hospital Discharge and Mortality of COVID-19 Patients", which is currently under review in the Nature Scientific Reports. 
 
-This is a repository of the code used for the paper entitled [Effective Ways to Build and Evaluate Individual
-Survival Distributions](https://arxiv.org/abs/1811.11347) (currently under review at the Journal of Machine Learning Research). This code can be used to run 6 different survival prediction models (Kaplan-Meier, Cox proportional-hazards, Accelerated Failure Time, Random Survival Forests, Cox Elastic-Net, and Multi-task Logistic Regression) and 5 evaluate those models across 5 different metrics (Concordance, Single/Integrated Brier score, L1-loss, 1-Calibration, and D-Calibration).
+## We commit to release all the codes and datasets used in above paper in this repository after the publication of the paper.
+
+The graphical abstract of our paper is shown below:
+
+** Insert The Figure ****
+
+
+## Contributors
+
+Li-Hao Kuan (lihao@ualberta.ca)
+Shi-ang Qi (shiang@ualberta.ca)
+Neeraj Kumar (neeraj4@ualberta.ca)
+Weijie Sun (weijie2@ualberta.ca)
+Jianfie Zhang (jianfie3@ualberta.ca)
+Russell Greiner (rgreiner@ualberta.ca)
+
+If you have any questions regarding individual survival predictions, please do not hesitate to contact us.
+
+
+
+Meanwhile you can look at the following codes associated with the paper titled [Effective Ways to Build and Evaluate Individual
+Survival Distributions](https://www.jmlr.org/papers/volume21/18-772/18-772.pdf) published in the Journal of Machine Learning Research in 2020. We adapted the aforementioned code for our survival prediction tasks and also added several functions that were specific to our COVID-19 personalized survival estimation. 
+
+-----------------------------------------------------
+-----------------------------------------------------
+This code can be used to run 6 different survival prediction models (Kaplan-Meier, Cox proportional-hazards, Accelerated Failure Time, Random Survival Forests, Cox Elastic-Net, and Multi-task Logistic Regression) and 5 evaluate those models across 5 different metrics (Concordance, Single/Integrated Brier score, L1-loss, 1-Calibration, and D-Calibration).
 
 
 If you are interested in using the datasets from the paper you can access the NACD (and subsequently the NACD-Col) data from the [Patient Specific Survival Prediction (PSSP) website](http://pssp.srv.ualberta.ca) under "Public Predictors" or use this [direct download link](http://pssp.srv.ualberta.ca/system/predictors/datasets/000/000/032/original/All_Data_updated_may2011_CLEANED.csv?1350302245). Note that the here the censored bit is flipped from the notation in the paper (CENSORED = 1 implies a censored patient). The data from TCGA can be found by accessing [TCGA's firebrowse website](http://firebrowse.org/), selecting a cancer cohort via dropdown, and downloading the clinical features by selecting the blue bar and choosing the `Clicnical_Pick_Tier1.md5` download link. All details for the High-Dimensional datasets can be found in the paper ["A Multi-Task Learning Formulation for Survival Analysis"](http://dmkd.cs.vt.edu/papers/KDD16.pdf) (left column of page 6) by Li et al. and the dataset downloadable links can be found on their [authors website](http://user.it.uu.se/~liuya610/download.html). Supplemental dataset details and results can be found on [RPubs](http://rpubs.com/haiderstats/ISDEvaluationSupplement) and their basic features and download links are given in the table below.
