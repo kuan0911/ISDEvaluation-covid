@@ -1,7 +1,7 @@
 # COVID-19 ISDEvaluation
 This repository will contain the codes and datasets we used for our paper "Learning Accurate Personalized Survival Models for Predicting Hospital Discharge and Mortality of COVID-19 Patients", which is currently under review in the Nature Scientific Reports. 
 
-## We commit to release all the codes and datasets used in above paper in this repository after the publication of the paper.
+## We commit to release all the codes and the datasets used in above paper in this repository after the publication of our paper.
 
 The graphical abstract of our paper is shown below:
 
