@@ -21,4 +21,4 @@ If you have any questions regarding individual survival predictions, please do n
 
 
 
-Meanwhile you can look at the following [ISDEvaluation codes](https://github.com/haiderstats/ISDEvaluation) associated with the paper titled [Effective Ways to Build and Evaluate Individual Survival Distributions](https://www.jmlr.org/papers/volume21/18-772/18-772.pdf) published in the Journal of Machine Learning Research in 2020. We adapted the aforementioned code for our survival prediction tasks and also added several functions that were specific to our COVID-19 personalized survival estimation. 
+Meanwhile you can look at the [ISDEvaluation codes](https://github.com/haiderstats/ISDEvaluation) associated with the paper titled [Effective Ways to Build and Evaluate Individual Survival Distributions](https://www.jmlr.org/papers/volume21/18-772/18-772.pdf) published in the Journal of Machine Learning Research in 2020. We adapted the aforementioned code for our survival prediction tasks and also added several functions that were specific to our COVID-19 personalized survival estimation. 
