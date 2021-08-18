@@ -1,4 +1,4 @@
-# Accurated Personalized Survival Prediction for COVID-19 Patients
+## Accurate Personalized Survival Prediction for COVID-19 Patients
 This repository will contain the codes and datasets we used for our paper "Learning Accurate Personalized Survival Models for Predicting Hospital Discharge and Mortality of COVID-19 Patients", which is currently under review in the Nature Scientific Reports. 
 
 ## We commit to release all the codes and the datasets used in above paper in this repository after the publication of our paper.
