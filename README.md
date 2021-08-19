@@ -5,7 +5,7 @@ This repository will contain the codes and datasets we used for our paper "Learn
 
 The graphical abstract of our paper is shown below:
 
-![image](GraphicalAbstract.png)
+![image](graphical_abstract.png)
 
 
 ## Contributors
